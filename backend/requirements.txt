@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+opencv-python-headless
+numpy
+insightface
+# GPU stack (NVIDIA, Windows): ใช้การ์ดจออัตโนมัติถ้ามี ตกกลับ CPU ถ้าไม่มี
+# ต้องการพื้นที่ ~2.5GB สำหรับแพ็กเกจ nvidia-*-cu12
+onnxruntime-gpu
+nvidia-cublas-cu12
+nvidia-cuda-runtime-cu12
+nvidia-cuda-nvrtc-cu12
+nvidia-cudnn-cu12
+nvidia-cufft-cu12
+nvidia-curand-cu12
+nvidia-cusolver-cu12
+nvidia-cusparse-cu12
