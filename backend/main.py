@@ -569,13 +569,13 @@ async def train_face(req: RecognizeFaceRequest):
                 face_db.add_embeddings(person_id, [embedding])
             else:
                 face_db.register_person(
-                    person_id="wichcha_chimploy",
+                    person_id="kittisak_pattanapaiboon",
                     name="ดร.วิชชา ฉิมพลี",
                     role="ประธานสภาคณาจารย์และพนักงาน",
                     title="ผู้ช่วยศาสตราจารย์ ดร.",
                     embeddings=[embedding],
                 )
-                person_id = "wichcha_chimploy"
+                person_id = "kittisak_pattanapaiboon"
 
             return {
                 "success": True,

@@ -23,9 +23,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 export const SecurityScanner: React.FC = () => {
   const { activitiesList } = usePortfolioStore();
   const [targetImage, setTargetImage] = useState<string | null>(
-    'https://www.dusit.ac.th/home/wp-content/gallery/20-12-66-ae-e0b8aae0b8a0e0b8b2e0b884e0b893e0b8b2e0b888e0b8b2e0b8a3e0b98ce0b8a2/AP7A6353_resize.JPG'
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'
   );
-  const [targetName, setTargetName] = useState<string>('ดร.วิชชา ฉิมพลี (บุคคลเป้าหมาย)');
+  const [targetName, setTargetName] = useState<string>('รศ.ดร.กิตติศักดิ์ พัฒนไพบูลย์ (ผู้อำนวยการศูนย์ AI)');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
   const [minConfidence, setMinConfidence] = useState<number>(90);
@@ -200,7 +200,7 @@ export const SecurityScanner: React.FC = () => {
               </div>
               <p className="text-xs text-slate-500">
                 {scanMode === 'target'
-                  ? '🟢 วงกลมสีเขียว = ดร.วิชชา ฉิมพลี | ใช้ DeepFace AI จำแนกตัวตน'
+                  ? '🟢 วงกลมสีเขียว = รศ.ดร.กิตติศักดิ์ พัฒนไพบูลย์ (ผู้อำนวยการศูนย์ AI)'
                   : '🔴 วงกลมสีแดง = บุคคลอื่น | 🟢 สีเขียว = ดร.วิชชา | นับจำนวนคนทั้งหมด'
                 }
               </p>
@@ -326,18 +326,12 @@ export const SecurityScanner: React.FC = () => {
             />
             <button
               onClick={() => {
-                setTargetImage('https://www.dusit.ac.th/home/wp-content/gallery/20-12-66-ae-e0b8aae0b8a0e0b8b2e0b884e0b893e0b8b2e0b888e0b8b2e0b8a3e0b98ce0b8a2/AP7A6353_resize.JPG');
-                setTargetName('ดร.วิชชา ฉิมพลี (ตัวอย่าง)');
+                setTargetImage('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80');
+                setTargetName('รศ.ดร.กิตติศักดิ์ พัฒนไพบูลย์ (ผู้อำนวยการศูนย์ AI)');
               }}
               className="w-full py-2 bg-cyan-950/80 hover:bg-cyan-900 border border-cyan-800 text-cyan-300 text-xs font-semibold rounded-xl transition-all"
             >
-              🔄 ใช้รูปตัวอย่าง ดร.วิชชา ฉิมพลี
-            </button>
-          </div>
-        </div>
-
-        {/* AI Stats & Controls Panel */}
-        <div className="md:col-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 shadow-xl flex flex-col justify-between">
+              🔄 ใช้รูปตัวอย่าง รศ.ดร.กิตติศักดิ์ พัฒนไพบูลย์ (ผู้อำนวยการศูนย์ AI)"md:col-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 shadow-xl flex flex-col justify-between">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
               <h3 className="text-base font-bold text-white flex items-center gap-2">

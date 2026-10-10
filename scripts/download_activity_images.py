@@ -39,7 +39,7 @@ image_urls = [
     "https://www.dusit.ac.th/home/wp-content/gallery/22-11-66-ae-e0b8aae0b896e0b8b2-e0b980e0b8a5e0b987e0b881/AP7A9696_resize.JPG"
 ]
 
-output_dir = r"c:\Users\Windows 11\OneDrive - Suan Dusit University\เดสก์ท็อป\งานจารย์วิชา\ปี2เทอม1\DR.Witcha\backend\training_data\wichcha_chimploy"
+output_dir = os.path.join(os.path.dirname(__file__), "..", "backend", "training_data", "kittisak_pattanapaiboon")
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)

@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { Activity, activities as frozenActivities } from '../data/activities';
 import eventsData from '../data/activities_events.json';
 
-const LOCAL_STORAGE_KEY = 'dr_witcha_activities_v3';
+const LOCAL_STORAGE_KEY = 'sdu_face_ai_activities_v4';
 
 // รวมชุด frozen วิจัย (84 กิจกรรม) + ชุดที่ขูดใหม่จากหมวด events (id ขึ้นต้น evt-)
 const initialActivities: Activity[] = (() => {

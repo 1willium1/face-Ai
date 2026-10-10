@@ -1,7 +1,7 @@
 """
 Train/Register Face Profile using InsightFace ArcFace.
 
-Reads images from training_data/wichcha_chimploy/
+Reads images from training_data/kittisak_pattanapaiboon/
 Detects faces + extracts ArcFace 512-D embeddings.
 Saves to face_database.json.
 """
@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from scanner.detector import FaceDetector
 from face_registry import get_registry
 
-TRAINING_DIR = os.path.join(os.path.dirname(__file__), "training_data", "wichcha_chimploy")
+TRAINING_DIR = os.path.join(os.path.dirname(__file__), "training_data", "kittisak_pattanapaiboon")
 DB_PATH = os.path.join(os.path.dirname(__file__), "face_database.json")
 
 IMAGE_EXTENSIONS = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.webp']
@@ -122,7 +122,7 @@ def main():
 
     # Register person with all embeddings
     registry.register_person(
-        person_id="wichcha_chimploy",
+        person_id="kittisak_pattanapaiboon",
         name="ดร.วิชชา ฉิมพลี",
         role="ประธานสภาคณาจารย์และพนักงาน",
         title="ผู้ช่วยศาสตราจารย์ ดร.",
@@ -130,7 +130,7 @@ def main():
     )
 
     print(f"\n[OK] Face profile created successfully!")
-    print(f"   Person: Dr.Wichcha Chimploy")
+    print(f"   Person: Assoc. Prof. Dr. Kittisak Pattanapaiboon")
     print(f"   Embeddings: {len(all_embeddings)}")
     print(f"   Model: ArcFace (InsightFace)")
     print(f"   Dimension: 512-D")
